@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.Web", "AwesomeGameLibrary.Web\AwesomeGameLibrary.Web.csproj", "{C16C3899-A6D8-48FE-BC60-4ECE4C584433}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DF8E42C7-D94C-45E4-BABE-75AA18F862CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{EB594360-120F-44C6-9117-50C3100C6392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.DAL", "AwesomeGameLibrary.DAL\AwesomeGameLibrary.DAL.csproj", "{2B1EA2FB-B485-4636-95C9-4082D6FC4391}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{8EC0A85C-E65A-4FD8-B2CF-0FB0AD2B6AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.DAL.Migrations", "AwesomeGameLibrary.DAL.Migrations\AwesomeGameLibrary.DAL.Migrations.csproj", "{2ECB692D-C510-4478-A723-020A38E9563C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C16C3899-A6D8-48FE-BC60-4ECE4C584433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16C3899-A6D8-48FE-BC60-4ECE4C584433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16C3899-A6D8-48FE-BC60-4ECE4C584433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16C3899-A6D8-48FE-BC60-4ECE4C584433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1EA2FB-B485-4636-95C9-4082D6FC4391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1EA2FB-B485-4636-95C9-4082D6FC4391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1EA2FB-B485-4636-95C9-4082D6FC4391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1EA2FB-B485-4636-95C9-4082D6FC4391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ECB692D-C510-4478-A723-020A38E9563C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECB692D-C510-4478-A723-020A38E9563C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECB692D-C510-4478-A723-020A38E9563C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECB692D-C510-4478-A723-020A38E9563C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C16C3899-A6D8-48FE-BC60-4ECE4C584433} = {DF8E42C7-D94C-45E4-BABE-75AA18F862CC}
+		{2B1EA2FB-B485-4636-95C9-4082D6FC4391} = {EB594360-120F-44C6-9117-50C3100C6392}
+		{2ECB692D-C510-4478-A723-020A38E9563C} = {8EC0A85C-E65A-4FD8-B2CF-0FB0AD2B6AE4}
+	EndGlobalSection
+EndGlobal
