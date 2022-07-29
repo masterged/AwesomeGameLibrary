@@ -1,4 +1,4 @@
-using AwesomeGameLibrary.DAL.Entities;
+using AwesomeGameLibrary.Domain.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AwesomeGameLibrary.DAL.Contexts;

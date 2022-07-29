@@ -1,7 +1,6 @@
 using AwesomeGameLibrary.DAL.Contexts;
 using AwesomeGameLibrary.DAL.Migrations;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
 
 
 IHost host = Host.CreateDefaultBuilder(args).ConfigureAppConfiguration(x =>

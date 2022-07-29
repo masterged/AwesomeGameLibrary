@@ -1,4 +1,4 @@
-namespace AwesomeGameLibrary.DAL.Entities;
+namespace AwesomeGameLibrary.Domain.Database.Entities;
 
 public class Game
 {

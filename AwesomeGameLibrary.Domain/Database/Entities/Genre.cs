@@ -1,6 +1,6 @@
-namespace AwesomeGameLibrary.DAL.Entities;
+namespace AwesomeGameLibrary.Domain.Database.Entities;
 
-public class Platform
+public class Genre
 {
     public int Id { get; set; }
     public string Name { get; set; }

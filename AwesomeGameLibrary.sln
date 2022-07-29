@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.DAL.Migrations", "AwesomeGameLibrary.DAL.Migrations\AwesomeGameLibrary.DAL.Migrations.csproj", "{2ECB692D-C510-4478-A723-020A38E9563C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.Domain", "AwesomeGameLibrary.Domain\AwesomeGameLibrary.Domain.csproj", "{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{7C93ADA4-C101-4560-8D8E-0D6DBD5FA76E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.Application", "AwesomeGameLibrary.Application\AwesomeGameLibrary.Application.csproj", "{5E81A092-C83D-47F8-9FFD-E415961EABED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,10 +42,19 @@ Global
 		{2ECB692D-C510-4478-A723-020A38E9563C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ECB692D-C510-4478-A723-020A38E9563C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ECB692D-C510-4478-A723-020A38E9563C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E81A092-C83D-47F8-9FFD-E415961EABED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E81A092-C83D-47F8-9FFD-E415961EABED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E81A092-C83D-47F8-9FFD-E415961EABED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E81A092-C83D-47F8-9FFD-E415961EABED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C16C3899-A6D8-48FE-BC60-4ECE4C584433} = {DF8E42C7-D94C-45E4-BABE-75AA18F862CC}
 		{2B1EA2FB-B485-4636-95C9-4082D6FC4391} = {EB594360-120F-44C6-9117-50C3100C6392}
 		{2ECB692D-C510-4478-A723-020A38E9563C} = {8EC0A85C-E65A-4FD8-B2CF-0FB0AD2B6AE4}
+		{5E81A092-C83D-47F8-9FFD-E415961EABED} = {7C93ADA4-C101-4560-8D8E-0D6DBD5FA76E}
 	EndGlobalSection
 EndGlobal
