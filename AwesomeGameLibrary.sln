@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.DAL.Migrations", "AwesomeGameLibrary.DAL.Migrations\AwesomeGameLibrary.DAL.Migrations.csproj", "{2ECB692D-C510-4478-A723-020A38E9563C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeGameLibrary.Domain", "AwesomeGameLibrary.Domain\AwesomeGameLibrary.Domain.csproj", "{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{2ECB692D-C510-4478-A723-020A38E9563C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ECB692D-C510-4478-A723-020A38E9563C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ECB692D-C510-4478-A723-020A38E9563C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBCDD9A-CB0E-40B5-A158-62ED14A9E14C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C16C3899-A6D8-48FE-BC60-4ECE4C584433} = {DF8E42C7-D94C-45E4-BABE-75AA18F862CC}

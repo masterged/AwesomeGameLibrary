@@ -1,8 +1,16 @@
+using AwesomeGameLibrary.DAL.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+builder.Services
+    .AddDbContext<AwesomeDbContext>((provider, optionsBuilder) => 
+        optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("AwesomeDbContext")));
+
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -16,13 +24,16 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.UseSwaggerUI();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
-;
-
 app.Run();
