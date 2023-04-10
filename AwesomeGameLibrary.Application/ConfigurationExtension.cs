@@ -14,11 +14,10 @@ public static class ConfigurationExtension
         var domainAssembly = typeof(ConfigurationExtension).GetTypeInfo().Assembly;
 
         // Add MediatR
-        serviceCollection.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(domainAssembly));
+        serviceCollection.AddMediatR(configuration =>
+            configuration.RegisterServicesFromAssembly(domainAssembly)
+                .AddOpenBehavior(typeof(ValidationBehavior<,>)));
 
-        serviceCollection.Add(new ServiceDescriptor(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>),
-            ServiceLifetime.Transient));
-        
         serviceCollection.AddValidatorsFromAssemblies(new[] { domainAssembly }, ServiceLifetime.Transient, null);
         return serviceCollection;
     }
