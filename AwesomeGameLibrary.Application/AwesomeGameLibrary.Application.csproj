@@ -7,11 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Audit.NET" Version="20.2.4" />
+      <PackageReference Include="Audit.NET.NLog" Version="20.2.4" />
       <PackageReference Include="ErrorOr" Version="1.2.1" />
       <PackageReference Include="FluentValidation" Version="11.5.2" />
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
       <PackageReference Include="MediatR" Version="12.0.1" />
       <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+      <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.3" />
     </ItemGroup>
 
     <ItemGroup>

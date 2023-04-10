@@ -12,7 +12,6 @@ public static class ErrorCollectionExtensions
         {
             modelStateDict.AddModelError(error.Code, error.Description);
         }
-
         return modelStateDict;
     }
 }

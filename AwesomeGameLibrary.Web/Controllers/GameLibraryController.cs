@@ -22,6 +22,7 @@ public class GameLibraryController : ControllerBase
         var result = await _mediator.Send(new GamesQuery());
         return result.Match(
             Ok,
-            errors => ValidationProblem(errors.ToModelState()));
+            errors => 
+                ValidationProblem(errors.ToModelState()));
     }
 }

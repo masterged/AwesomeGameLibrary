@@ -3,6 +3,7 @@ using AwesomeGameLibrary.DAL.Contexts;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
+using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,13 @@ builder.Services
 
 builder.Services.AddSwaggerGen();
 
+builder
+    .Host
+    .UseNLog();
+
 var app = builder.Build();
+
+app.AuditSetupOutput();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -42,7 +42,6 @@ public class GenreController : ControllerBase
                     return NotFound(errors.FirstOrDefault());
 
                 return Problem();
-
             });
     }
 }
