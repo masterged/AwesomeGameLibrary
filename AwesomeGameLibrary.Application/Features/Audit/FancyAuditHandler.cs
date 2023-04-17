@@ -9,9 +9,8 @@ public class FancyAuditHandler : INotificationHandler<FancyAuditCommand<GenreEve
 {
     public async Task Handle(FancyAuditCommand<GenreEvent> notification, CancellationToken cancellationToken)
     {
-        await using (var scope =
-                     await AuditScope.CreateAsync(new AuditScopeOptions() { AuditEvent = notification.Event }))
-        {
-        }
+        await using var scope = await AuditScope.CreateAsync(new AuditScopeOptions());
+        scope.SetCustomField(nameof(notification.Event.MyExtensionField),notification.Event.MyExtensionField);
+        scope.SetCustomField(nameof(notification.Event.MyFancyEventType), notification.Event.MyFancyEventType.Value);
     }
 }

@@ -11,7 +11,7 @@ namespace AwesomeGameLibrary.Application.Validation
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
-        public ValidationBehavior(IEnumerable<IValidator<TRequest>> validators) => this._validators = validators;
+        public ValidationBehavior(IEnumerable<IValidator<TRequest>> validators) => _validators = validators;
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next,
             CancellationToken cancellationToken)
@@ -19,14 +19,14 @@ namespace AwesomeGameLibrary.Application.Validation
             var failures = _validators
                 .Select(v => v.Validate(request))
                 .SelectMany<ValidationResult, ValidationFailure>(result => result.Errors)
-                .ToArray();
-            
-            if (failures.Any())
+                .ToList();
+
+            if (failures.Count > 0)
             {
                 var errors = failures.Select(x => Error.Validation(
                     code: x.PropertyName,
                     description: x.ErrorMessage)).ToList();
-                
+
                 var response = (TResponse?)typeof(TResponse)
                     .GetMethod(
                         name: nameof(ErrorOr<object>.From),

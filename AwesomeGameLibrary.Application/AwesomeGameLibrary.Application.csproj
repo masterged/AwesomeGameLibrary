@@ -7,6 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="AspNetCore.HealthChecks.System" Version="6.0.5" />
+      <PackageReference Include="AspNetCore.HealthChecks.UI" Version="6.0.5" />
+      <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+      <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.5" />
+      <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
       <PackageReference Include="Audit.NET" Version="20.2.4" />
       <PackageReference Include="Audit.NET.NLog" Version="20.2.4" />
       <PackageReference Include="ErrorOr" Version="1.2.1" />
