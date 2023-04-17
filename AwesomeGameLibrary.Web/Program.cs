@@ -7,37 +7,20 @@ using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services
-    .AddHealthChecks()
-    .AddProcessAllocatedMemoryHealthCheck(maximumMegabytesAllocated: 100, tags: new[] { "process", "memory" })
-    .AddDiskStorageHealthCheck(x => x.AddDrive("C:\\"), tags: new[] { "storage" });
-
-
-builder.Services.AddHealthChecksUI(x =>
-{
-    x.SetHeaderText("Branding Demo - Health Checks Status");
-    x.AddHealthCheckEndpoint("endpoint1", "/health-process");
-    x.AddHealthCheckEndpoint("endpoint2", "/health-disc");
-}).AddInMemoryStorage();
-
 builder.Services.AddControllers();
-builder.Services.AddApplication();
+builder.Services.AddMediatr();
+builder.Services.AddHealthCheck();
 
 builder.Services
     .AddDbContext<AwesomeDbContext>((_, optionsBuilder) =>
         optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("AwesomeDbContext")));
 
 builder.Services.AddSwaggerGen();
-
-builder
-    .Host
-    .UseNLog();
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 
 var app = builder.Build();
-
 app.AuditSetupOutput();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

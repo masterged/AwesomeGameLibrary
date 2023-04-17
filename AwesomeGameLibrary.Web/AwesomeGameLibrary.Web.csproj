@@ -16,14 +16,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
-        <PackageReference Include="AspNetCore.HealthChecks.System" Version="6.0.5" />
-        <PackageReference Include="AspNetCore.HealthChecks.UI" Version="6.0.5" />
         <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
-        <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.5" />
         <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
-        <PackageReference Include="Audit.NET" Version="20.2.4" />
-        <PackageReference Include="Audit.NET.NLog" Version="20.2.4" />
         <PackageReference Include="ErrorOr" Version="1.2.1" />
         <PackageReference Include="FluentValidation" Version="11.5.2" />
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
@@ -38,6 +32,7 @@
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
         <PackageReference Include="NLog" Version="5.1.3" />
         <PackageReference Include="NLog.Extensions.Logging" Version="5.2.3" />
+        <PackageReference Include="NLog.Targets.Syslog" Version="7.0.0" />
         <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
