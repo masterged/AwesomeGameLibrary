@@ -2,7 +2,7 @@
 
 namespace AwesomeGameLibrary.Domain.Audit;
 
-public class FancyAuditEvent
+public class FancyAuditEvent : AuditEvent
 {
     /// <summary>
     /// Поле

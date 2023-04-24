@@ -1,7 +1,11 @@
 using System.Reflection;
 using Audit.Core;
+using AwesomeGameLibrary.Application.Features.Audit;
+using AwesomeGameLibrary.Application.Features.Audit.Command;
 using AwesomeGameLibrary.Application.Validation;
+using AwesomeGameLibrary.Domain.Audit;
 using FluentValidation;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using NLog;
@@ -18,9 +22,10 @@ public static class ConfigurationExtension
 
         // Add MediatR
         serviceCollection.AddMediatR(configuration =>
-            configuration.RegisterServicesFromAssembly(domainAssembly)
+            configuration.RegisterServicesFromAssembly(domainAssembly).RegisterServicesFromAssemblies()
                 .AddOpenBehavior(typeof(ValidationBehavior<,>)));
-
+        serviceCollection
+            .AddTransient<INotificationHandler<FancyAuditCommand<GenreEvent>>, FancyAuditHandler<GenreEvent>>();
         serviceCollection.AddValidatorsFromAssemblies(new[] { domainAssembly }, ServiceLifetime.Transient, null);
     }
 
@@ -32,11 +37,8 @@ public static class ConfigurationExtension
             .UseNLog(config => config
                 .Logger(LogManager.Setup()
                     .LoadConfigurationFromAppSettings()
-                    .GetLogger("Audit"))        
-                .LogLevel(LogLevel.Debug)
-                .Message(auditEvent => auditEvent.ToJson()));
-
-        Configuration.JsonSettings.WriteIndented = true;
+                    .GetLogger("Audit"))
+                .LogLevel(LogLevel.Debug));
     }
 
     public static void AddHealthCheck(this IServiceCollection serviceCollection)

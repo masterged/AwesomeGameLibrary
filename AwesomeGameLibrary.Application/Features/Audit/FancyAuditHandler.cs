@@ -5,12 +5,10 @@ using MediatR;
 
 namespace AwesomeGameLibrary.Application.Features.Audit;
 
-public class FancyAuditHandler : INotificationHandler<FancyAuditCommand<GenreEvent>>
+public class FancyAuditHandler<TEvent> : INotificationHandler<FancyAuditCommand<TEvent>> where TEvent : FancyAuditEvent
 {
-    public async Task Handle(FancyAuditCommand<GenreEvent> notification, CancellationToken cancellationToken)
+    public async Task Handle(FancyAuditCommand<TEvent> notification, CancellationToken cancellationToken)
     {
-        await using var scope = await AuditScope.CreateAsync(new AuditScopeOptions());
-        scope.SetCustomField(nameof(notification.Event.MyExtensionField),notification.Event.MyExtensionField);
-        scope.SetCustomField(nameof(notification.Event.MyFancyEventType), notification.Event.MyFancyEventType.Value);
+        await AuditScope.LogAsync("1111",new {field = "1111"});
     }
 }
