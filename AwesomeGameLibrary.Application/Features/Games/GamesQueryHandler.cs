@@ -11,10 +11,7 @@ public class GamesQueryHandler : IRequestHandler<GamesQuery, ErrorOr<IReadOnlyCo
 {
     private readonly AwesomeDbContext _dbContext;
 
-    public GamesQueryHandler(AwesomeDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
+    public GamesQueryHandler(AwesomeDbContext dbContext) => _dbContext = dbContext;
 
     public async Task<ErrorOr<IReadOnlyCollection<Game>>> Handle(GamesQuery request, CancellationToken cancellationToken) 
         => await _dbContext.Games.ToArrayAsync(cancellationToken: cancellationToken);

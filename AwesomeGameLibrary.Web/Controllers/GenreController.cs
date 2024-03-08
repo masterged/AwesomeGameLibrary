@@ -4,7 +4,6 @@ using AwesomeGameLibrary.Web.Errors;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ErrorOr;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AwesomeGameLibrary.Web.Controllers;
 
