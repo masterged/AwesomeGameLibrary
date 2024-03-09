@@ -1,18 +1,16 @@
-using System.ComponentModel.Design;
 using AwesomeGameLibrary.Application.Features.Genres.Queries;
 using AwesomeGameLibrary.DAL.Contexts;
 using AwesomeGameLibrary.Domain.Database.Entities;
 using MediatR;
 using ErrorOr;
-using Microsoft.EntityFrameworkCore;
 
 namespace AwesomeGameLibrary.Application.Features.Genres;
 
-public class GetGenreHander : IRequestHandler<GenresGetByIdQuery,ErrorOr<Genre>>
+public class GetGenreHandler : IRequestHandler<GenresGetByIdQuery,ErrorOr<Genre>>
 {
     private readonly AwesomeDbContext _awesomeDbContext;
 
-    public GetGenreHander(AwesomeDbContext awesomeDbContext)
+    public GetGenreHandler(AwesomeDbContext awesomeDbContext)
     {
         _awesomeDbContext = awesomeDbContext;
     }

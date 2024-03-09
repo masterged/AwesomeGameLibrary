@@ -9,7 +9,8 @@ IHost host = Host.CreateDefaultBuilder(args).ConfigureAppConfiguration(x =>
     .ConfigureServices((context, collection) =>
     {
         collection.AddDbContext<AwesomeDbContext>(builder =>
-            builder.UseSqlServer(context.Configuration.GetConnectionString("AwesomeDbContext"), 
+            builder.UseSqlServer(
+                context.Configuration.GetConnectionString("AwesomeDbContext"), 
                 x => x.MigrationsAssembly("AwesomeGameLibrary.DAL.Migrations")));
         collection.AddHostedService<Worker>();
     })

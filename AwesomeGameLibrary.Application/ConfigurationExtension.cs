@@ -1,8 +1,6 @@
 using System.Reflection;
-using AwesomeGameLibrary.Application.Features.Games;
 using AwesomeGameLibrary.Application.Validation;
 using FluentValidation;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AwesomeGameLibrary.Application;
